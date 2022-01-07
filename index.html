@@ -223,9 +223,8 @@ String.prototype.sub()
     <sub>
 String.prototype.sup()
     <sup>
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
- function
+// ******************************************************************************************
+ FUNCTION
  ********************************************************************
  Why Functions?
  Functions are one of the fundamental building blocks in JavaScript.
@@ -236,6 +235,58 @@ String.prototype.sup()
  
  You  can use the same code many times with different arguments,
   to produce different results.
+
+  
+  // IIFE function
+  *********************
+
+  n Immediately-invoked Function Expression (IIFE for friends) is a way to execute functions immediately, as soon as they are created. IIFEs are very useful because they don't pollute the global object, 
+  and they are a simple way to isolate variables declarations.
+
+  The common advantage of IIFE is that any "Function or Variable" 
+  defined inside IIFE, cannot be accessed outside the IIFE block, 
+  thus preventing global scope from getting polluted. 
+  Also helps us manage memory in an efficient manner.
+
+// (function (num1,num2){
+    
+//     console.log(num1,num2)
+// })(2,3)
+
+// Anonymous function
+************************
+a function that was declared without any named identifier to refer to it. As such, 
+an anonymous function is usually not accessible after its initial creation.
+
+Do anonymous functions get hoisted?
+Anonymous functions, on the other hand, are not hoisted. 
+As you can see, when we call the "brag" function before the function declaration, 
+we get an error. 
+When we call it after the declaration, it works
+
+Hoisting
+******************
+
+In JavaScript, Hoisting is the default behavior of moving all 
+the declarations at the top of the scope before code execution. 
+Basically, it gives us an advantage that no matter 
+where functions and variables are declared, they are moved to the top of their 
+scope regardless of whether their scope is global or local.
+
+shadowing
+*********************
+
+Variable shadowing occurs when a variable of an inner scope 
+is defined with the same name as a variable in the outer scope. ...
+ In the inner scope, both variables' scope overlap.
+
+let getSum =function(num1,num2){
+    let sum=num1+num2
+    return sum;
+}
+getSum(2,3)
+
+
 
   RECURSION Function
 
